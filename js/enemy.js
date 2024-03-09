@@ -22,7 +22,7 @@ class enemy{
         function ShootBulletUp(){
             if(this.enemyBullets > 0){
                 if(player.playerLives > 0){
-                    var RandNum = ParseInt(Math.Random() * 1);
+                    var RandNum = ParseInt(Math.random() * 1);
                     if(RandNum == 0){
                         enemyBulletPoistion = document.getElementById("player").style.top;
                         document.getElementById("enemy").style.top = ParseInt(this.enemyBulletPosition);
@@ -43,7 +43,7 @@ class enemy{
         function shootBulletDown(){
             if(this.enemyBullets > 0){
                 if(player.playerLives > 0){
-                    var RandNum = ParseInt(Math.Random() * 1);
+                    var RandNum = ParseInt(Math.random() * 1);
                     if(RandNum == 0){
                         this.enemyBulletPosition = document.getElementById("player").style.top;
                         document.getElementById("enemy-bullet").style.top = ParseInt(this.enemyBulletPosition);
@@ -84,7 +84,7 @@ class enemy{
         }
         function shootBulletRight(){
             if(this.enemyBullets > 0 && player.playerLives > 0){
-                var RandNum = ParseInt(Math.Random() * 1);
+                var RandNum = ParseInt(Math.random() * 1);
                 if(RandNum == 0){
                     this.enemyPosition = document.getElementById("player").style.left;
                     document.getElementById("enemy-bullet").style.left = this.enemyPosition;
