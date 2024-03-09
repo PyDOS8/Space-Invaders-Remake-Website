@@ -104,6 +104,7 @@ class enemy{
             var bulletIMG = document.getElementById("player-bullet").src;
             if(bullet == enemy){
                 if(bulletIMG == "imgs/weapons/missile.jpg"){
+                    EnemyLives = 0;
                     player.player.GameOver();
                     document.getElementById("enemy").src = "imgs/enemy/enemyDead.jpg";
                 }else{
