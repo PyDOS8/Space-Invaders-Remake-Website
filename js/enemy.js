@@ -22,7 +22,7 @@ class enemy{
         function ShootBulletUp(){
             if(this.enemyBullets > 0){
                 if(player.playerLives > 0){
-                    var RandNum = Math.Random() * 1;
+                    var RandNum = ParseInt(Math.Random() * 1);
                     if(RandNum == 0){
                         enemyBulletPoistion = document.getElementById("player").style.top;
                         document.getElementById("enemy").style.top = ParseInt(this.enemyBulletPosition);
