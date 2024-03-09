@@ -13,40 +13,40 @@ class player{
             function MovePlayerLeft(){
                 var playerX = parseInt(document.getElementById("player").style.left);
                 playerX -= 1
-                playerLeft = true;
-                if(playerRight == true || playerBottom == true || playerTop == true){
-                    playerRight = false;
-                    playerBottom = false;
-                    playerTop = false;
+                this.playerLeft = true;
+                if(this.playerRight == true || this.playerBottom == true || this.playerTop == true){
+                    this.playerRight = false;
+                    this.playerBottom = false;
+                    this.playerTop = false;
                 }
             }
             function MovePlayerRight(){
                 var playerX = parseInt(document.getElementById("player").style.left);
                 playerX += 1;
-                playerRight = true;
-                if(playerLeft == true || playerBottom == true || playerTop == true){
-                    playerLeft = false;
-                    playerBottom = false;
-                    playerTop = false;
+                this.playerRight = true;
+                if(this.playerLeft == true || this.playerBottom == true || this.playerTop == true){
+                    this.playerLeft = false;
+                    this.playerBottom = false;
+                    this.playerTop = false;
                 }
             }
             function MovePlayerUp(){
                 var playerY = parseInt(document.getElementById("player").style.top);
                 playerY -= 1;
-                playerTop = true;
-                if(playerLeft == true || playerBottom == true || playerRight == true){
-                    playerLeft = false;
-                    playerBottom = false;
-                    playerRight = false;
+                this.playerTop = true;
+                if(this.playerLeft == true || this.playerBottom == true || this.playerRight == true){
+                    this.playerLeft = false;
+                    this.playerBottom = false;
+                    this.playerRight = false;
                 }
             }
             function MovePlayerDown(){
                 var playerY = parseInt(document.getElementById("player").style.bottom);
                 playerY += 1;
-                if(playerLeft == True || playerRight == true || playerBottom == true){
-                    playerLeft = false;
-                    playerRight = false;
-                    playerBottom = false;
+                if(this.playerLeft == true || this.playerRight == true || this.playerBottom == true){
+                    this.playerLeft = false;
+                    this.playerRight = false;
+                    this.playerBottom = false;
                 }
             }
             function GameOver(){
@@ -71,14 +71,14 @@ class player{
                if(this.ammo > 0){
                     var bulletY = document.getElementById("player-bullet").top;
                     bulletY = "100%";
-                    this.ammo = ammo -1;
+                    this.ammo = this.ammo -1;
                }else{
                     var bullet = document.getElementById("player-bullet");
                     bullet.src = "imgs/weapons/missile";
                     bullet.top = "100%";
                }
                var ammoLabel = document.getElementById("AmmoLeftLabel");
-               ammoLabel.innerText = ammo;
+               ammoLabel.innerText = this.ammo;
                this.checkIfBulletHitEnemy();
             }
             function shootDown(){
@@ -93,7 +93,7 @@ class player{
                     bullet = "-100%";
                 }
                 var ammoLabel = document.getElementById("AmmoLeftLabel");
-                ammoLabel.innerText = ammo;
+                ammoLabel.innerText = this.ammo;
                 this.checkIfBulletHitEnemy();
             }
             function checkIfBulletHitPlayer(){
