@@ -43,7 +43,7 @@ class enemy{
         function shootBulletDown(){
             if(this.enemyBullets > 0){
                 if(player.playerLives > 0){
-                    var RandNum = Math.Random() * 1;
+                    var RandNum = ParseInt(Math.Random() * 1);
                     if(RandNum == 0){
                         this.enemyBulletPosition = document.getElementById("player").style.top;
                         document.getElementById("enemy-bullet").style.top = ParseInt(this.enemyBulletPosition);
@@ -84,7 +84,7 @@ class enemy{
         }
         function shootBulletRight(){
             if(this.enemyBullets > 0 && player.playerLives > 0){
-                var RandNum = Math.Random() * 1;
+                var RandNum = ParseInt(Math.Random() * 1);
                 if(RandNum == 0){
                     this.enemyPosition = document.getElementById("player").style.left;
                     document.getElementById("enemy-bullet").style.left = this.enemyPosition;
@@ -101,7 +101,7 @@ class enemy{
             var bullet = document.getElementById("player-bullet").style.position;
             var enemy = document.getElementById("enemy").style.position;
             if(bullet == enemy){
-                var EnemyLives = Math.Random() * 10;
+                var EnemyLives = ParseInt(Math.Random() * 10);
                 if(bullet.src == "imgs/weapons/missile.jpg"){
                     player.player.GameOver();
                     document.getElementById("enemy").src = "imgs/enemy/enemyDead.jpg";
