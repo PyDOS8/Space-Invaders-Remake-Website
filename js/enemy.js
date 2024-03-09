@@ -110,6 +110,7 @@ class enemy{
                         EnemyLives = EnemyLives - 1;
                     }else{
                         player.player.GameOver();
+                        document.getElementById("EnemyCSS").src = "imgs/enemy/enemyDead.jpg";
                     }
                 }
             }
