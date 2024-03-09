@@ -85,7 +85,7 @@ class player{
                 if(this.ammo > 0){
                     var bulletY = document.getElementById("player-bullet").top;
                     bulletY = "-100%";
-                    this.ammo = ammo-1;
+                    this.ammo = this.ammo-1;
                     this.checkIfBulletHitEnemy()
                 }else{
                     var bullet = document.getElementById("player-bullet");
@@ -104,7 +104,7 @@ class player{
                         player.src = "imgs/player/playerDead.jpg";
                     }else{
                         if(this.playerLives > 0){
-                            this.playerLives = playerLives - 1;
+                            this.playerLives = this.playerLives - 1;
                         }else{
                             player.src = "imgs/player/playerDead.jpg";
                             alert("Enemy won!");
