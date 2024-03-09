@@ -101,7 +101,7 @@ class enemy{
             var bullet = document.getElementById("player-bullet").style.position;
             var enemy = document.getElementById("enemy").style.position;
             if(bullet == enemy){
-                var EnemyLives = ParseInt(Math.Random() * 10);
+                var EnemyLives = ParseInt(Math.random() * 10);
                 if(bullet.src == "imgs/weapons/missile.jpg"){
                     player.player.GameOver();
                     document.getElementById("enemy").src = "imgs/enemy/enemyDead.jpg";
